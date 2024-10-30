@@ -1,0 +1,71 @@
+// Body styles
+
+body {
+	font-family: "Nunito", sans-serif;
+	font-size: 1.1rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+	background: $background;
+	color: $text;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: calc(100%);
+	a,
+	h2,
+	h1 {
+		font-size: 2.2rem;
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+	}
+	box-sizing: border-box;
+	h3 {
+		font-size: 1.3rem;
+	}
+	a {
+		text-decoration: none;
+		color: $text;
+		font-weight: 600;
+	}
+	p {
+		margin-left: calc(10%);
+		margin-right: calc(10%);
+	}
+	img {
+		width: auto;
+		height: auto;
+	}
+}
+
+main {
+	background: $background-light;
+}
+
+#return {
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+// med fonts
+@include media-med {
+	body {
+		a {
+			font-size: 1.35rem;
+		}
+		h1,
+		h2 {
+			font-size: 1.7rem;
+		}
+	}
+}
+
+// Adjusting to vertical menu
+@include media-large {
+	main,
+	footer {
+		margin-left: calc($header-width + 5px);
+		width: calc(100% - $header-width - 5px);
+	}
+}

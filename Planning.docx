@@ -1,0 +1,48 @@
+Incognito lighthouse test 5/6:
+99 Performance
+62 Accessibility
+96 Best Practices
+81 SEO
+
+Planning
+
+1. Accessibility & Performance
+
+X html lang attribute 
+X image alt attributes
+X github link for screen readers
+X github icon class instead id
+X charset declaration
+X links at least 48x48 on mobile
+X Colour contrast
+X On hover clear
+X Submit button colour on hover
+X Moving with keyboard
+X Set header min height
+X explicit width and height on img
+X splash creating hor scroll on big
+X WebP format?
+X project images into webP
+X font-display css?
+
+Incognito lighthouse test 7/6:
+100 Performance
+100 Accessibility
+100 Best Practices
+100 SEO
+
+2. Style & Content
+
+X Page styling
+
+4. JavaScript
+
+X Typing effect on banner
+X Burger menu
+X Form validation
+O Animation to scroll down and return
+
+5. Bug Fixing & Deployment
+
+- Viewable at 200%
+- minify css for deployment

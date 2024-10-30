@@ -1,0 +1,96 @@
+// Page styles
+
+.border-box {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: 3px solid $text;
+	border-radius: 14px;
+	background-color: $background;
+	h2 {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}
+
+// Code snippets
+
+.code-snippet {
+	margin: auto;
+	margin-top: 3px;
+	padding: 5px 3px;
+	.border-box {
+		text-align: left;
+		margin: auto;
+		padding: 5px 3px;
+		background-color: $background-light;
+		font-size: 0.7rem;
+	}
+}
+
+@include media-small {
+	.code-snippet {
+		margin: 15px 3px;
+		.border-box {
+			margin: 15px 3px;
+			font-size: 1.3rem;
+		}
+	}
+}
+
+@include media-med {
+	.code-snippet {
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top: 10%;
+		margin-bottom: 10%;
+		padding-top: 15px;
+		padding-bottom: 25px;
+		padding-left: 20px;
+		padding-right: 20px;
+		.border-box {
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-top: 10%;
+			margin-bottom: 10%;
+			padding-top: 15px;
+			padding-bottom: 25px;
+			padding-left: 20px;
+			padding-right: 20px;
+			font-size: 1.1rem;
+			pre {
+				margin-left: 5%;
+			}
+		}
+	}
+}
+
+// headshot
+
+.headshot {
+	border: 3px solid $text;
+	border-radius: 14px;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 10%;
+}
+
+// media wide on text pages
+
+@include media-wide {
+	#about-box,
+	#scs-box {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	#scs-box {
+		div:first-of-type {
+			grid-column-start: span 2;
+		}
+	}
+}

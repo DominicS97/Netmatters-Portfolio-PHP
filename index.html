@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Portfolio | Dominic Sutcliffe</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="Dominic Sutcliffe Web Developer's online portfolio Index page"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+			media="print"
+			onload="this.media='all'"
+		/>
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+				rel="stylesheet"
+				type="text/css"
+			/>
+		</noscript>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script src="script.js" defer></script>
+	</head>
+
+	<body onresize="burgerForceclose()">
+		<!-- target for return link -->
+		<span id="top"></span>
+
+		<header id="header">
+			<!-- container for sidebar items -->
+			<div id="container">
+				<!-- logo -->
+				<div>
+					<a href="index.html" id="logo">
+						<picture>
+							<source
+								type="image/webp"
+								media="(min-width: 1200px)"
+								srcset="img/webp/large/logo.webp"
+							/>
+							<source
+								type="image/png"
+								media="(min-width: 1200px)"
+								srcset="img/png/large/logo.png"
+							/>
+							<source
+								type="image/webp"
+								media="(min-width: 768px)"
+								srcset="img/webp/medium/logo.webp"
+							/>
+							<source
+								type="image/png"
+								media="(min-width: 768px)"
+								srcset="img/png/medium/logo.png"
+							/>
+							<source
+								type="image/webp"
+								srcset="img/webp/small/logo.webp"
+							/>
+							<img
+								alt="stylish logo"
+								src="img/png/small/logo.png"
+								width="400px"
+								height="400px"
+							/>
+						</picture>
+					</a>
+				</div>
+
+				<!-- burger menu (xsmall only) -->
+				<div>
+					<button onclick="burgerToggle()">
+						<a
+							id="icn-burger"
+							aria-label="View Navigation Menu"
+						></a>
+					</button>
+				</div>
+
+				<!-- content page links -->
+				<div id="links">
+					<ul>
+						<li><a class="link" href="about.html">About Me</a></li>
+						<li>
+							<a class="link" href="projects.html">Projects</a>
+						</li>
+						<li>
+							<a class="link" href="code.html">Code Snippets</a>
+						</li>
+						<li><a class="link" href="scs.html">SCS Scheme</a></li>
+					</ul>
+				</div>
+
+				<div id="links2">
+					<ul>
+						<li><a class="link" href="about.html">About Me</a></li>
+						<li>
+							<a class="link" href="projects.html">Projects</a>
+						</li>
+						<li>
+							<a class="link" href="code.html">Code Snippets</a>
+						</li>
+						<li><a class="link" href="scs.html">SCS Scheme</a></li>
+					</ul>
+				</div>
+
+				<!-- subtitle -->
+				<div>
+					<h2>
+						<a class="link" href="index.html#contact">Contact Me</a>
+					</h2>
+				</div>
+
+				<!-- socials -->
+				<div>
+					<br />
+					<a
+						href="https://github.com/DominicS97"
+						target="_blank"
+						class="icn-github"
+						aria-label="View GitHub page"
+					></a>
+					<p>a</p>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!-- container for splash img -->
+			<div id="splash">
+				<h1 id="type1">Dominic Sutcliffe</h1>
+				<h2 id="type2">Web Developer</h2>
+				<h3><a href="#projects">Scroll Down</a></h3>
+				<span id="icn-down"></span>
+				<picture>
+					<source
+						type="image/webp"
+						media="(min-width: 1200px)"
+						srcset="img/webp/large/splash.webp"
+					/>
+					<source
+						type="image/png"
+						media="(min-width: 1200px)"
+						srcset="img/png/large/splash.png"
+					/>
+					<source
+						type="image/webp"
+						media="(min-width: 768px)"
+						srcset="img/webp/medium/splash.webp"
+					/>
+					<source
+						type="image/png"
+						media="(min-width: 768px)"
+						srcset="img/png/medium/splash.png"
+					/>
+					<source
+						type="image/webp"
+						srcset="img/webp/small/splash.webp"
+					/>
+					<img
+						alt="stylish splash image"
+						src="img/png/small/splash.png"
+						width="1920px"
+						height="1080px"
+					/>
+				</picture>
+			</div>
+
+			<!-- container for projects -->
+			<div id="projects">
+				<div>
+					<picture>
+						<source
+							type="image/webp"
+							media="(min-width: 768px)"
+							srcset="img/webp/small/project-1.webp"
+						/>
+						<source
+							type="image/png"
+							media="(min-width: 768px)"
+							srcset="img/png/small/project-1.png"
+						/>
+						<source
+							type="image/webp"
+							srcset="img/webp/medium/project-1.webp"
+						/>
+						<img
+							alt="screenshot of replica Netmatters homepage"
+							src="img/png/medium/project-1.png"
+							width="1440"
+							height="810"
+						/>
+					</picture>
+					<h2>Netmatters Homepage</h2>
+					<h3>
+						<a class="link" href="projects.html#project-1"
+							>View Project</a
+						>
+					</h3>
+				</div>
+
+				<div>
+					<picture>
+						<source
+							type="image/webp"
+							media="(min-width: 768px)"
+							srcset="img/webp/small/project-2.webp"
+						/>
+						<source
+							type="image/png"
+							media="(min-width: 768px)"
+							srcset="img/png/small/project-2.png"
+						/>
+						<source
+							type="image/webp"
+							srcset="img/webp/medium/project-2.webp"
+						/>
+						<img
+							alt="screenshot of current webpage"
+							src="img/png/medium/project-2.png"
+							width="1440"
+							height="810"
+						/>
+					</picture>
+					<h2>Portfolio</h2>
+					<h3>
+						<a class="link" href="projects.html#project-2"
+							>View Project</a
+						>
+					</h3>
+				</div>
+
+				<div>
+					<picture>
+						<source
+							type="image/webp"
+							media="(min-width: 768px)"
+							srcset="img/webp/small/project-3.webp"
+						/>
+						<source
+							type="image/png"
+							media="(min-width: 768px)"
+							srcset="img/png/small/project-3.png"
+						/>
+						<source
+							type="image/webp"
+							srcset="img/webp/medium/project-3.webp"
+						/>
+						<img
+							alt="placeholder project image"
+							src="img/png/medium/project-3.png"
+							width="1440"
+							height="810"
+						/>
+					</picture>
+					<h2>Management Dashboard</h2>
+					<h3>
+						<a class="link" href="projects.html#project-3"
+							>View Project</a
+						>
+					</h3>
+				</div>
+
+				<div>
+					<picture>
+						<source
+							type="image/webp"
+							media="(min-width: 768px)"
+							srcset="img/webp/small/project-4.webp"
+						/>
+						<source
+							type="image/png"
+							media="(min-width: 768px)"
+							srcset="img/png/small/project-4.png"
+						/>
+						<source
+							type="image/webp"
+							srcset="img/webp/medium/project-4.webp"
+						/>
+						<img
+							alt="placeholder project image"
+							src="img/png/medium/project-4.png"
+							width="1440"
+							height="810"
+						/>
+					</picture>
+					<h2>Javascript Pacman</h2>
+					<h3>
+						<a class="link" href="projects.html#project-4"
+							>View Project</a
+						>
+					</h3>
+				</div>
+
+				<div>
+					<picture>
+						<source
+							type="image/webp"
+							media="(min-width: 768px)"
+							srcset="img/webp/small/project-ex.webp"
+						/>
+						<source
+							type="image/png"
+							media="(min-width: 768px)"
+							srcset="img/png/small/project-ex.png"
+						/>
+						<source
+							type="image/webp"
+							srcset="img/webp/medium/project-ex.webp"
+						/>
+						<img
+							alt="placeholder project image"
+							src="img/png/medium/project-ex.png"
+							width="1440"
+							height="810"
+						/>
+					</picture>
+					<h2>TBA</h2>
+					<h3>
+						<a class="link" href="projects.html#project-5"
+							>View Project</a
+						>
+					</h3>
+				</div>
+
+				<div>
+					<picture>
+						<source
+							type="image/webp"
+							media="(min-width: 768px)"
+							srcset="img/webp/small/project-ex.webp"
+						/>
+						<source
+							type="image/png"
+							media="(min-width: 768px)"
+							srcset="img/png/small/project-ex.png"
+						/>
+						<source
+							type="image/webp"
+							srcset="img/webp/medium/project-ex.webp"
+						/>
+						<img
+							alt="placeholder project image"
+							src="img/png/medium/project-ex.png"
+							width="1440"
+							height="810"
+						/>
+					</picture>
+					<h2>TBA</h2>
+					<h3>
+						<a class="link" href="projects.html#project-6"
+							>View Project</a
+						>
+					</h3>
+				</div>
+			</div>
+
+			<!-- container for form -->
+			<div id="contact">
+				<div id="get-contact">
+					<h1>Get In Touch</h1>
+					<p>
+						I'd love to hear from fellow developers seeking to
+						collaborate or prospective employers who are interested
+						in my skills.
+					</p>
+					<ul>
+						<li>07713136016</li>
+						<li>dejfsutcliffe@gmail.com</li>
+					</ul>
+					<p>
+						Contact me here and I will respond as soon as possible.
+					</p>
+				</div>
+
+				<form>
+					<div>
+						<label for="fname" class="required">First Name:</label>
+						<input
+							type="text"
+							name="fname"
+							id="fname"
+							placeholder="First Name..."
+						/>
+						<small id="fname-check">Name is missing</small>
+					</div>
+					<div>
+						<label for="lname">Last Name:</label>
+						<input
+							type="text"
+							name="lname"
+							id="lname"
+							placeholder="Last Name..."
+						/>
+					</div>
+					<div>
+						<label for="email" class="required"
+							>Email Address:</label
+						>
+						<input
+							type="text"
+							name="email"
+							id="email"
+							placeholder="Email Address..."
+						/>
+						<small id="email-check">Email must be valid</small>
+					</div>
+					<div>
+						<label for="phone" class="required"
+							>Phone Number:</label
+						>
+						<input
+							type="text"
+							name="phone"
+							id="phone"
+							placeholder="Phone Number..."
+						/>
+						<small id="phone-check"
+							>Phone Number must be valid</small
+						>
+					</div>
+					<div>
+						<label for="message" class="required"
+							>Your Message:</label
+						>
+						<textarea
+							name="message"
+							id="message"
+							placeholder="Your Message..."
+						></textarea>
+						<small id="message-check">Message is missing</small>
+					</div>
+					<input
+						id="submit"
+						type="submit"
+						value="Submit"
+						onclick="formValidate()"
+					/>
+				</form>
+			</div>
+
+			<!-- container for return -->
+			<div id="return">
+				<span id="icn-up"></span>
+				<a href="#top">Back To Top</a>
+			</div>
+		</main>
+
+		<footer>
+			<div>
+				<ul>
+					<li>00000 000000</li>
+					<li>fake.email@mail.com</li>
+				</ul>
+			</div>
+
+			<!-- container for socials/info -->
+			<div>
+				<br />
+				<a
+					href="https://github.com/DominicS97"
+					target="_blank"
+					class="icn-github"
+					aria-label="View GitHub page"
+				></a>
+				<br />
+			</div>
+
+			<!-- container for copyright -->
+			<div>
+				<p>&copy; Dominic Sutcliffe 2024</p>
+			</div>
+		</footer>
+	</body>
+</html>
