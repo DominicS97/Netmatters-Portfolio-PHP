@@ -1,4 +1,101 @@
 <?php
+require 'db_connection.php';
+use PHPMailer\PHPMailer\PHPMailer;
+
+// define variables and set to empty values
+$fname = $lname = $email = $phone = $message = "";
+$fnameErr = $lnameErr = $emailErr = $phoneErr = $messageErr = "";
+
+
+function test_input($data)
+{
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$stmt = $conn->prepare("INSERT INTO messages (First_Name, Last_Name, Email, Phone, Message) VALUES (?, ?, ?, ?, ?)");
+	$stmt->bind_param("sssss", $fname, $lname, $email, $phone, $message);
+
+	if (empty($_POST["fname"])) {
+		$fnameErr = "Name is required";
+	} else {
+		$fname = test_input($_POST["fname"]);
+		if (!preg_match("/^[a-zA-Z-' ]*$/", $fname)) {
+			$fnameErr = "Only letters and white space allowed";
+		}
+	}
+
+	if (empty($_POST["lname"])) {
+		$lname = "";
+	} else {
+		$lname = test_input($_POST["lname"]);
+		if (!preg_match("/^[a-zA-Z-' ]*$/", $lname)) {
+			$lnameErr = "Only letters and white space allowed";
+		}
+	}
+
+	if (empty($_POST["email"])) {
+		$emailErr = "Email is required";
+	} else {
+		$email = test_input($_POST["email"]);
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			$emailErr = "Invalid email format";
+		}
+	}
+
+	if (empty($_POST["phone"])) {
+		$phoneErr = "Phone is required";
+	} else {
+		$phone = test_input($_POST["phone"]);
+	}
+
+	if (empty($_POST["message"])) {
+		$messageErr = "Message is required";
+	} else {
+		$message = test_input($_POST["message"]);
+		if (!preg_match("/^[a-zA-Z-' ]*$/", $message)) {
+			$messageErr = "Only letters and white space allowed";
+		}
+	}
+
+	if ($stmt->execute()) {
+		echo '<div class="message message-green">Message sent successfully!</div>';
+		// Start with PHPMailer class
+		require_once './vendor/autoload.php';
+		// create a new object
+		$mail = new PHPMailer();
+		// configure an SMTP
+		$mail->isSMTP();
+		$mail->Host = 'live.smtp.mailtrap.io';
+		$mail->SMTPAuth = true;
+		$mail->Username = 'api';
+		$mail->Password = 'f1674a87c6825ce110e478eadde89a92';
+		$mail->Port = 587;
+
+		$mail->setFrom('smtp@mailtrap.io', 'api');
+		$mail->addAddress('dejfsutcliffe@gmail.com', 'Dominic Sutcliffe');
+		$mail->Subject = 'Message from Portfolio';
+		// Set HTML 
+		$mail->isHTML(false);
+		$mail->Body = $message;
+
+		// send the message
+		if (!$mail->send()) {
+			echo 'Message could not be sent.';
+			echo 'Mailer Error: ' . $mail->ErrorInfo;
+		} else {
+			echo 'Message has been sent';
+		}
+	} else {
+		echo '<div class="message message-red">Error: ' . $stmt->error . '</div>';
+	}
+
+	$stmt->close();
+	$conn->close();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,76 +122,7 @@
 </head>
 
 <body onresize="burgerForceclose()">
-	<!-- target for return link -->
-	<span id="top"></span>
-
-	<header id="header">
-		<!-- container for sidebar items -->
-		<div id="container">
-			<!-- logo -->
-			<div>
-				<a href="index.html" id="logo">
-					<picture>
-						<source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/large/logo.webp" />
-						<source type="image/png" media="(min-width: 1200px)" srcset="img/png/large/logo.png" />
-						<source type="image/webp" media="(min-width: 768px)" srcset="img/webp/medium/logo.webp" />
-						<source type="image/png" media="(min-width: 768px)" srcset="img/png/medium/logo.png" />
-						<source type="image/webp" srcset="img/webp/small/logo.webp" />
-						<img alt="stylish logo" src="img/png/small/logo.png" width="400px" height="400px" />
-					</picture>
-				</a>
-			</div>
-
-			<!-- burger menu (xsmall only) -->
-			<div>
-				<button onclick="burgerToggle()">
-					<a id="icn-burger" aria-label="View Navigation Menu"></a>
-				</button>
-			</div>
-
-			<!-- content page links -->
-			<div id="links">
-				<ul>
-					<li><a class="link" href="about.html">About Me</a></li>
-					<li>
-						<a class="link" href="projects.html">Projects</a>
-					</li>
-					<li>
-						<a class="link" href="code.html">Code Snippets</a>
-					</li>
-					<li><a class="link" href="scs.html">SCS Scheme</a></li>
-				</ul>
-			</div>
-
-			<div id="links2">
-				<ul>
-					<li><a class="link" href="about.html">About Me</a></li>
-					<li>
-						<a class="link" href="projects.html">Projects</a>
-					</li>
-					<li>
-						<a class="link" href="code.html">Code Snippets</a>
-					</li>
-					<li><a class="link" href="scs.html">SCS Scheme</a></li>
-				</ul>
-			</div>
-
-			<!-- subtitle -->
-			<div>
-				<h2>
-					<a class="link" href="index.html#contact">Contact Me</a>
-				</h2>
-			</div>
-
-			<!-- socials -->
-			<div>
-				<br />
-				<a href="https://github.com/DominicS97" target="_blank" class="icn-github"
-					aria-label="View GitHub page"></a>
-				<p>a</p>
-			</div>
-		</div>
-	</header>
+	<?php include 'php/header.php'; ?>
 
 	<main>
 		<!-- container for splash img -->
@@ -216,30 +244,40 @@
 				</p>
 			</div>
 
-			<form>
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 				<div>
 					<label for="fname" class="required">First Name:</label>
-					<input type="text" name="fname" id="fname" placeholder="First Name..." />
+					<input type="text" name="fname" id="fname" placeholder="First Name..."
+						value="<?php echo $fname; ?>" />
 					<small id="fname-check">Name is missing</small>
+					<span class="error">* <?php echo $fnameErr; ?></span>
 				</div>
 				<div>
 					<label for="lname">Last Name:</label>
-					<input type="text" name="lname" id="lname" placeholder="Last Name..." />
+					<input type="text" name="lname" id="lname" placeholder="Last Name..."
+						value="<?php echo $lname; ?>" />
+					<span class="error">* <?php echo $lnameErr; ?></span>
 				</div>
 				<div>
 					<label for="email" class="required">Email Address:</label>
-					<input type="text" name="email" id="email" placeholder="Email Address..." />
+					<input type="text" name="email" id="email" placeholder="Email Address..."
+						value="<?php echo $email; ?>" />
 					<small id="email-check">Email must be valid</small>
+					<span class="error">* <?php echo $emailErr; ?></span>
 				</div>
 				<div>
 					<label for="phone" class="required">Phone Number:</label>
-					<input type="text" name="phone" id="phone" placeholder="Phone Number..." />
+					<input type="text" name="phone" id="phone" placeholder="Phone Number..."
+						value="<?php echo $phone; ?>" />
 					<small id="phone-check">Phone Number must be valid</small>
+					<span class="error">* <?php echo $phoneErr; ?></span>
 				</div>
 				<div>
 					<label for="message" class="required">Your Message:</label>
-					<textarea name="message" id="message" placeholder="Your Message..."></textarea>
+					<textarea name="message" id="message" placeholder="Your Message..."
+						value="<?php echo $message; ?>"></textarea>
 					<small id="message-check">Message is missing</small>
+					<span class="error">* <?php echo $messageErr; ?></span>
 				</div>
 				<input id="submit" type="submit" value="Submit" onclick="formValidate()" />
 			</form>
@@ -252,27 +290,7 @@
 		</div>
 	</main>
 
-	<footer>
-		<div>
-			<ul>
-				<li>00000 000000</li>
-				<li>fake.email@mail.com</li>
-			</ul>
-		</div>
-
-		<!-- container for socials/info -->
-		<div>
-			<br />
-			<a href="https://github.com/DominicS97" target="_blank" class="icn-github"
-				aria-label="View GitHub page"></a>
-			<br />
-		</div>
-
-		<!-- container for copyright -->
-		<div>
-			<p>&copy; Dominic Sutcliffe 2024</p>
-		</div>
-	</footer>
+	<?php include 'php/footer.php'; ?>
 </body>
 
 </html>

@@ -7,7 +7,7 @@
     <div id="container">
         <!-- logo -->
         <div>
-            <a href="index.html" id="logo">
+            <a href="index.php" id="logo">
                 <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/large/logo.webp" />
                     <source type="image/png" media="(min-width: 1200px)" srcset="img/png/large/logo.png" />
@@ -29,34 +29,34 @@
         <!-- content page links -->
         <div id="links">
             <ul>
-                <li><a class="link" href="about.html">About Me</a></li>
+                <li><a class="link" href="about.php">About Me</a></li>
                 <li>
-                    <a class="link" href="projects.html">Projects</a>
+                    <a class="link" href="projects.php">Projects</a>
                 </li>
                 <li>
-                    <a class="link" href="code.html">Code Snippets</a>
+                    <a class="link" href="code.php">Code Snippets</a>
                 </li>
-                <li><a class="link" href="scs.html">SCS Scheme</a></li>
+                <li><a class="link" href="scs.php">SCS Scheme</a></li>
             </ul>
         </div>
 
         <div id="links2">
             <ul>
-                <li><a class="link" href="about.html">About Me</a></li>
+                <li><a class="link" href="about.php">About Me</a></li>
                 <li>
-                    <a class="link" href="projects.html">Projects</a>
+                    <a class="link" href="projects.php">Projects</a>
                 </li>
                 <li>
-                    <a class="link" href="code.html">Code Snippets</a>
+                    <a class="link" href="code.php">Code Snippets</a>
                 </li>
-                <li><a class="link" href="scs.html">SCS Scheme</a></li>
+                <li><a class="link" href="scs.php">SCS Scheme</a></li>
             </ul>
         </div>
 
         <!-- subtitle -->
         <div>
             <h2>
-                <a class="link" href="index.html#contact">Contact Me</a>
+                <a class="link" href="index.php#contact">Contact Me</a>
             </h2>
         </div>
 
