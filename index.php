@@ -250,34 +250,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<input type="text" name="fname" id="fname" placeholder="First Name..."
 						value="<?php echo $fname; ?>" />
 					<small id="fname-check">Name is missing</small>
-					<span class="error">* <?php echo $fnameErr; ?></span>
+					<small><?php echo $fnameErr; ?></small>
 				</div>
 				<div>
 					<label for="lname">Last Name:</label>
 					<input type="text" name="lname" id="lname" placeholder="Last Name..."
 						value="<?php echo $lname; ?>" />
-					<span class="error">* <?php echo $lnameErr; ?></span>
+					<small><?php echo $lnameErr; ?></small>
 				</div>
 				<div>
 					<label for="email" class="required">Email Address:</label>
 					<input type="text" name="email" id="email" placeholder="Email Address..."
 						value="<?php echo $email; ?>" />
 					<small id="email-check">Email must be valid</small>
-					<span class="error">* <?php echo $emailErr; ?></span>
+					<small><?php echo $emailErr; ?></small>
 				</div>
 				<div>
 					<label for="phone" class="required">Phone Number:</label>
 					<input type="text" name="phone" id="phone" placeholder="Phone Number..."
 						value="<?php echo $phone; ?>" />
 					<small id="phone-check">Phone Number must be valid</small>
-					<span class="error">* <?php echo $phoneErr; ?></span>
+					<small><?php echo $phoneErr; ?></small>
 				</div>
 				<div>
 					<label for="message" class="required">Your Message:</label>
 					<textarea name="message" id="message" placeholder="Your Message..."
 						value="<?php echo $message; ?>"></textarea>
 					<small id="message-check">Message is missing</small>
-					<span class="error">* <?php echo $messageErr; ?></span>
+					<small><?php echo $messageErr; ?></small>
 				</div>
 				<input id="submit" type="submit" value="Submit" onclick="formValidate()" />
 			</form>
