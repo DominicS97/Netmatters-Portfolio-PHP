@@ -31,7 +31,7 @@
 		<!-- container for splash img -->
 		<div id="splash">
 			<h1 id="type1">Dominic Sutcliffe</h1>
-			<h2 id="type2">Web Developer</h2>
+			<h2 id="type2">Learning to Code</h2>
 			<h3><a href="#scs-box">Scroll Down</a></h3>
 			<span id="icn-down"></span>
 			<picture>

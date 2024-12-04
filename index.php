@@ -151,13 +151,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<img alt="screenshot of replica Netmatters homepage" src="img/png/medium/project-1.png" width="1440"
 						height="810" />
 				</picture>
-				<h2>Netmatters Homepage</h2>
-				<h3>
-					<a class="link" href="projects.html#project-1">View Project</a>
-				</h3>
+				<div>
+					<h2>Netmatters Homepage</h2>
+					<h3>
+						<a class="link" href="projects.html#project-1">View Project</a>
+					</h3>
+					<p>Netmatters Homepage remade in HTML, CSS, JavaScript and PHP</p>
+				</div>
 			</div>
 
-			<div>
+			<div class="hidden">
 				<picture>
 					<source type="image/webp" media="(min-width: 768px)" srcset="img/webp/small/project-2.webp" />
 					<source type="image/png" media="(min-width: 768px)" srcset="img/png/small/project-2.png" />
@@ -165,10 +168,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<img alt="screenshot of current webpage" src="img/png/medium/project-2.png" width="1440"
 						height="810" />
 				</picture>
-				<h2>Portfolio</h2>
-				<h3>
-					<a class="link" href="projects.html#project-2">View Project</a>
-				</h3>
+				<div>
+					<h2>Portfolio</h2>
+					<h3>
+						<a class="link" href="projects.html#project-2">View Project</a>
+					</h3>
+					<p>Personal Portfolio created in HTML, CSS, JavaScript and PHP</p>
+				</div>
 			</div>
 
 			<div>
@@ -178,10 +184,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<source type="image/webp" srcset="img/webp/medium/project-3.webp" />
 					<img alt="placeholder project image" src="img/png/medium/project-3.png" width="1440" height="810" />
 				</picture>
-				<h2>Management Dashboard</h2>
-				<h3>
-					<a class="link" href="projects.html#project-3">View Project</a>
-				</h3>
+				<div>
+					<h2>Management Dashboard</h2>
+					<h3>
+						<a class="link" href="projects.html#project-3">View Project</a>
+					</h3>
+					<p>An employee and company management dashboard created in
+						C# and React.js</p>
+				</div>
 			</div>
 
 			<div>
@@ -191,13 +201,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<source type="image/webp" srcset="img/webp/medium/project-4.webp" />
 					<img alt="placeholder project image" src="img/png/medium/project-4.png" width="1440" height="810" />
 				</picture>
-				<h2>Javascript Pacman</h2>
-				<h3>
-					<a class="link" href="projects.html#project-4">View Project</a>
-				</h3>
+				<div>
+					<h2>Javascript Pacman</h2>
+					<h3>
+						<a class="link" href="projects.html#project-4">View Project</a>
+					</h3>
+					<p>A copy of the classic game Pacman recreated in
+						Javascript.</p>
+				</div>
 			</div>
 
-			<div>
+			<div class="hidden">
 				<picture>
 					<source type="image/webp" media="(min-width: 768px)" srcset="img/webp/small/project-ex.webp" />
 					<source type="image/png" media="(min-width: 768px)" srcset="img/png/small/project-ex.png" />
@@ -211,7 +225,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				</h3>
 			</div>
 
-			<div>
+			<div class="hidden">
 				<picture>
 					<source type="image/webp" media="(min-width: 768px)" srcset="img/webp/small/project-ex.webp" />
 					<source type="image/png" media="(min-width: 768px)" srcset="img/png/small/project-ex.png" />

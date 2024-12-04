@@ -69,3 +69,9 @@ main {
 		width: calc(100% - $header-width - 5px);
 	}
 }
+
+// Hidden
+
+.hidden {
+	display: none;
+}

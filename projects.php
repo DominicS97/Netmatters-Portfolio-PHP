@@ -31,7 +31,7 @@
 		<!-- container for splash img -->
 		<div id="splash">
 			<h1 id="type1">Dominic Sutcliffe</h1>
-			<h2 id="type2">Web Developer</h2>
+			<h2 id="type2">My Projects</h2>
 			<h3><a href="#projects-detail">Scroll Down</a></h3>
 			<span id="icn-down"></span>
 			<picture>
@@ -60,14 +60,13 @@
 					deployment and planning skills.
 				</p>
 				<h3>
-					<a class="link" target="_blank"
-						href="https://dominics97.github.io/Netmatters-HTML-CSS-Assessment/">View Demo</a><br />
+					<a class="link" target="_blank" href="https://netmatters.dominic97.dev/">View Demo</a><br />
 					<a class="link" target="_blank"
 						href="https://github.com/DominicS97/Netmatters-HTML-CSS-Assessment">View on GitHub</a>
 				</h3>
 			</div>
 
-			<div id="project-2">
+			<!-- <div id="project-2" class="hidden">
 				<picture>
 					<source type="image/webp" media="(min-width: 768px)" srcset="img/webp/large/project-2.webp" />
 					<source type="image/png" media="(min-width: 768px)" srcset="img/png/large/project-2.png" />
@@ -84,12 +83,12 @@
 					skills.
 				</p>
 				<h3>
-					<a class="link" target="_blank" href="https://dominics97.github.io/Netmatters-Portfolio/">View
+					<a class="link" target="_blank" href="https://portfolio.dominic97.dev/">View
 						Demo</a><br />
 					<a class="link" target="_blank" href="https://github.com/DominicS97/Netmatters-Portfolio">View on
 						GitHub</a>
 				</h3>
-			</div>
+			</div> -->
 
 			<div id="project-3">
 				<picture>
@@ -129,7 +128,7 @@
 				</h3>
 			</div>
 
-			<div id="project-5">
+			<!-- <div id="project-5" class="hidden">
 				<picture>
 					<source type="image/webp" media="(min-width: 768px)" srcset="img/webp/large/project-ex.webp" />
 					<source type="image/png" media="(min-width: 768px)" srcset="img/png/large/project-ex.png" />
@@ -148,9 +147,9 @@
 				<h3>
 					<a class="link" target="_blank" href="https://github.com/DominicS97">View on GitHub</a>
 				</h3>
-			</div>
+			</div> -->
 
-			<div id="project-6">
+			<!-- <div id="project-6" class="hidden">
 				<picture>
 					<source type="image/webp" media="(min-width: 768px)" srcset="img/webp/large/project-ex.webp" />
 					<source type="image/png" media="(min-width: 768px)" srcset="img/png/large/project-ex.png" />
@@ -169,7 +168,7 @@
 				<h3>
 					<a class="link" target="_blank" href="https://github.com/DominicS97">View on GitHub</a>
 				</h3>
-			</div>
+			</div> -->
 		</div>
 		<!-- container for return -->
 		<div id="return">

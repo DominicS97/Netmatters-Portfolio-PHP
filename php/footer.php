@@ -3,8 +3,8 @@
 <footer>
     <div>
         <ul>
-            <li>00000 000000</li>
-            <li>fake.email@mail.com</li>
+            <li>07713136016</li>
+            <li>dejfsutcliffe@gmail.com</li>
         </ul>
     </div>
 
